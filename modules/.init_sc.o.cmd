@@ -1,0 +1,1 @@
+cmd_/home/vishal/Kernel_world/DEVICE_DRIVER_SCRACTH/init_sc.o := ld -m elf_x86_64   -r -o /home/vishal/Kernel_world/DEVICE_DRIVER_SCRACTH/init_sc.o /home/vishal/Kernel_world/DEVICE_DRIVER_SCRACTH/init_function.o /home/vishal/Kernel_world/DEVICE_DRIVER_SCRACTH/exit_function.o 
