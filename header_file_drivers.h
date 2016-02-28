@@ -2,6 +2,9 @@
 #include<linux/module.h>
 #include<linux/sched.h>
 #include<linux/fs.h>
+#include<linux/moduleparam.h>
+#include<linux/slab.h>
+#include<linux/cdev.h>
 
 #ifndef MACROS
 #define MACROS

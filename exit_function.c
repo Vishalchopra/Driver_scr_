@@ -3,22 +3,16 @@
 
 static void __exit exit_function(void)
 {
-	int ret;
-	ret = 0;
-	 unregister_chrdev_region(dev, nod);
-	if(ret < 0)
-		goto OUT;
-	else{
-		#ifdef DEBUG
-			printk(KERN_INFO "unregister sucessfully\n");	
-		#endif
-	}	
+	int ret, dvar;
+	dvar = ret = 0;
+
+	for(dvar = 0; dvar < nod; dvar++){
+		cdev_del(&(sdev + dvar)->c_dev);
+	}
+	kfree(sdev);
+	unregister_chrdev_region(dev, nod);
 	#ifdef DEBUG
 		printk(KERN_INFO"Goodbye Cruel World\n");	
-	#endif
-OUT:
-	#ifdef DEBUG
-		printk(KERN_INFO "unregister  is not sucessful\n");	
 	#endif
 	
 }
